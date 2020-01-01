@@ -1,3 +1,0 @@
-ansible all -i hosts -m ping
-ansible all  -m command -a "uname -a"
-ansible-playbook --check file
