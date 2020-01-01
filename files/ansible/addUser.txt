@@ -1,0 +1,14 @@
+---
+  - name:Add user
+    hosts:all
+    gather_facts:no 
+    tasks:
+      - name: Create testuser
+        user:
+          name: "{{ item.name }}"
+          state: present
+          group: "{{ item.groups }}"
+        loop:
+          - {name:"testuser1", groups:"testgroup1"}
+          - {name:"testuser2", groups:"testgroup2"}
+

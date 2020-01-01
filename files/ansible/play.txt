@@ -1,0 +1,10 @@
+---
+  # Play1 - WebServer related tasks
+  - name: Create Users
+    hosts: nodes
+    tasks:
+      - name: create username apacheadm
+        become_user: root
+        user:
+          name: apacheadm
+          group: testGroup

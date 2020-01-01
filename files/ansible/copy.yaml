@@ -1,0 +1,13 @@
+---
+- name: Exemple copy module
+  hosts: nodes
+#  gather_facts: no
+  tasks:
+    - name: Copy file
+      file:
+        path: /home/ramzi/touched.txt
+        state: touch
+    - copy:
+        src: /home/ramzi/touched.txt
+        dest: /home/ramzi/touched.txt
+
